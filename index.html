@@ -8,7 +8,11 @@
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
-  <!-- PapaParse (CSV parser) -->
+  <!-- MarkerCluster -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <!-- PapaParse for CSV -->
   <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 <body>
@@ -17,24 +21,18 @@
     <h1>Карта пирамид мира</h1>
     <div class="controls">
       <div class="pill">
-        🔎 <input id="search" type="search" placeholder="Поиск: страна, название…" />
+        🔎 <input id="search" type="search" placeholder="Поиск: страна, название или тип…" />
       </div>
-      <span class="hint">Источник: Google Sheets · кликай или наведи на пин</span>
+      <span class="hint">Источник: локальный CSV · кликай по пинам</span>
     </div>
   </div>
 </header>
-
-<main>
-  <div id="map"></div>
-</main>
-
+<main><div id="map"></div></main>
 <footer>
   <div class="wrap">
-    <div class="hint">Сделано для визуализации списка пирамид. Внешние ссылки открываются в новой вкладке.</div>
+    <div class="hint">Ссылки (Google Maps, Фото) открываются в новой вкладке.</div>
   </div>
 </footer>
-
-<script src="config.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
