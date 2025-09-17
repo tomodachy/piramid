@@ -12,7 +12,9 @@
     <h1>Карта пирамид мира</h1>
     <div class="legend">Данные загружаются из Google Sheets</div>
   </header>
-  <div id="map"></div>
+
+  <!-- ВАЖНО: контейнер карты обязательно должен существовать в DOM -->
+  <div id="map" aria-label="Карта"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="config.js"></script>

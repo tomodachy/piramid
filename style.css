@@ -6,8 +6,9 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
 .topbar{position:fixed;z-index:500;left:12px;top:12px;background:#ffffffcc;backdrop-filter:saturate(1.2) blur(6px);padding:10px 14px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12);}
 .topbar h1{margin:0;font-size:16px;line-height:1.2}
 .topbar .legend{font-size:12px;color:var(--muted)}
-#map{position:absolute;inset:0}
-/* Попап: весь текст чёрный, ссылки синие; визовый блок внизу и менее заметный */
+/* Карта: занимаем весь экран */
+#map{position:fixed;inset:0;height:100vh;width:100vw;}
+/* Попап: текст чёрный, ссылки синие; визы внизу и приглушённые */
 .leaflet-popup-content{color:#000;}
 .leaflet-popup-content h3{margin:.2em 0 .25em 0}
 .leaflet-popup-content .meta{margin:0 0 .4em 0;color:#111}
