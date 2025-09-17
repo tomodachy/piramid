@@ -1,0 +1,5 @@
+// Укажите ID таблицы и (опционально) имя листа
+window.SHEET_ID = "1LIhMd2jLuC8r6DtDEAui8YP0_0vGsuGPs8f61JzspZo";
+window.SHEET_NAME = ""; // например: "Данные"
+// Начальный центр карты (если нет маркеров)
+window.DEFAULT_VIEW = { lat: 30, lng: 10, zoom: 2 };

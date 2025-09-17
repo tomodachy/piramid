@@ -1,0 +1,17 @@
+:root{
+  --link:#1a73e8;
+  --muted:#6b7280;
+}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans";}
+.topbar{position:fixed;z-index:500;left:12px;top:12px;background:#ffffffcc;backdrop-filter:saturate(1.2) blur(6px);padding:10px 14px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12);}
+.topbar h1{margin:0;font-size:16px;line-height:1.2}
+.topbar .legend{font-size:12px;color:var(--muted)}
+#map{position:absolute;inset:0}
+/* Попап: весь текст чёрный, ссылки синие; визовый блок внизу и менее заметный */
+.leaflet-popup-content{color:#000;}
+.leaflet-popup-content h3{margin:.2em 0 .25em 0}
+.leaflet-popup-content .meta{margin:0 0 .4em 0;color:#111}
+.leaflet-popup-content strong{color:#000}
+.leaflet-popup-content a{color:var(--link);text-decoration:underline}
+.leaflet-popup-content .links{margin:.5em 0 .35em;display:flex;gap:10px;flex-wrap:wrap}
+.leaflet-popup-content .visa{margin-top:.45em;padding:.35em .5em;border:1px dashed #e5e7eb;border-radius:8px;font-size:12px;color:var(--muted);background:#fafafa}

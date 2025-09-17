@@ -1,49 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Каталог пирамид</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта пирамид мира</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>Каталог пирамид</h1>
-    <p class="muted">Данные загружаются из Google Sheets.</p>
+  <header class="topbar">
+    <h1>Карта пирамид мира</h1>
+    <div class="legend">Данные загружаются из Google Sheets</div>
   </header>
+  <div id="map"></div>
 
-  <main class="container">
-    <div id="list" class="cards"></div>
-  </main>
-
-  <!-- Модал -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal__backdrop" data-close></div>
-    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal__close" title="Закрыть" aria-label="Закрыть" data-close>&times;</button>
-      <div class="modal__content">
-        <h2 id="modal-title" class="modal__title"></h2>
-        <div class="modal__meta"></div>
-
-        <div class="modal__row"><strong>Высота/размер:</strong> <span data-field="height"></span></div>
-        <div class="modal__row"><strong>Описание:</strong> <span data-field="description"></span></div>
-        <div class="modal__row"><strong>Мифы и легенды:</strong> <span data-field="myths"></span></div>
-
-        <div class="modal__links">
-          <a target="_blank" rel="noopener" data-field="mapsUrl">Открыть в Google Maps ↗</a>
-          <a target="_blank" rel="noopener" data-field="imagesUrl">Открыть фото (Google Images) ↗</a>
-        </div>
-
-        <!-- Блок про визы -->
-        <div class="modal__visa muted" data-field="visa"></div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    window.SHEET_ID = "1LIhMd2jLuC8r6DtDEAui8YP0_0vGsuGPs8f61JzspZo";
-    window.SHEET_NAME = "";
-  </script>
-  <script src="app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
