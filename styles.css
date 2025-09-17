@@ -1,0 +1,37 @@
+:root{
+  --bg:#0b0d10;
+  --card:#151922;
+  --text:#0a0a0a;
+  --text-invert:#f7f7f7;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --link:#1a73e8;
+  --radius:16px;
+  --shadow:0 8px 30px rgba(0,0,0,.12);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans";background:#fafafa;color:#111;}
+.site-header{padding:24px 16px;text-align:center;}
+.site-header h1{margin:0 0 6px}
+.muted{color:var(--muted)}
+.container{max-width:1100px;margin:0 auto;padding:0 16px 48px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);cursor:pointer;transition:transform .12s ease;}
+.card:hover{transform:translateY(-2px)}
+.card h3{margin:0 0 6px;font-size:18px}
+.card .meta{font-size:14px;color:var(--muted)}
+.card .type{display:inline-block;margin-top:6px;font-size:12px;color:#374151;background:#eef2ff;padding:2px 8px;border-radius:999px}
+.modal{position:fixed;inset:0;display:none;}
+.modal[aria-hidden="false"]{display:block}
+.modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.45);}
+.modal__dialog{position:relative;max-width:640px;margin:6vh auto;background:#fff;color:#000;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.35);padding:18px 18px 10px;}
+.modal__close{position:absolute;right:10px;top:6px;border:0;background:transparent;font-size:28px;line-height:1;cursor:pointer;color:#111;}
+.modal__title{margin:4px 6px 8px 6px}
+.modal__meta{margin:0 6px 10px;color:#111}
+.modal__row{margin:8px 6px;color:#111}
+.modal__row strong{color:#111}
+.modal__content a{color:var(--link);text-decoration:underline}
+.modal__links{display:flex;gap:14px;margin:12px 6px}
+.modal__visa{margin:14px 6px 4px;padding:6px 8px;border:1px dashed #e5e7eb;border-radius:10px;font-size:13px;color:var(--muted);background:#fafafa;}
+@media (max-width:560px){.modal__dialog{margin:2vh 10px}}

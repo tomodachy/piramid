@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог пирамид</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Каталог пирамид</h1>
+    <p class="muted">Данные загружаются из Google Sheets.</p>
+  </header>
+
+  <main class="container">
+    <div id="list" class="cards"></div>
+  </main>
+
+  <!-- Модал -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" title="Закрыть" aria-label="Закрыть" data-close>&times;</button>
+      <div class="modal__content">
+        <h2 id="modal-title" class="modal__title"></h2>
+        <div class="modal__meta"></div>
+
+        <div class="modal__row"><strong>Высота/размер:</strong> <span data-field="height"></span></div>
+        <div class="modal__row"><strong>Описание:</strong> <span data-field="description"></span></div>
+        <div class="modal__row"><strong>Мифы и легенды:</strong> <span data-field="myths"></span></div>
+
+        <div class="modal__links">
+          <a target="_blank" rel="noopener" data-field="mapsUrl">Открыть в Google Maps ↗</a>
+          <a target="_blank" rel="noopener" data-field="imagesUrl">Открыть фото (Google Images) ↗</a>
+        </div>
+
+        <!-- Блок про визы -->
+        <div class="modal__visa muted" data-field="visa"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.SHEET_ID = "1LIhMd2jLuC8r6DtDEAui8YP0_0vGsuGPs8f61JzspZo";
+    window.SHEET_NAME = "";
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
